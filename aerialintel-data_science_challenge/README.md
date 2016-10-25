@@ -7,25 +7,27 @@ Predicting wheat yield in the Winter (data provided by Aerial Intelligence) by u
 
 ## APPROACH
 I approached this project by doing the following items in sequential order:
-    1. Preprocessing Data
-        - remove samples (rows) with missing data
-        - remove useless features (columns) with zero variance
-    2. Exploratory Data Analysis (EDA)
-        - review feature(s) distributions
-        - review target distribution (to help determine a proper train/test/split)
-    3. Feature Selection
-        - run/evaluate ML algorithms
-        - evaluate feature importances
-        - run sequential backward selection (SBS) for further feature selection insight
-    4. Model Optimization
-        - MODELS USED: Linear Regression, Random Forrest Regressor, Gradient Boosting Regressor
-        - evaluate different hyper parameters
-            - Linear Regression: I utilized RANSAC (random sampling consensus) method and tuned the same size number
-            - Random Forest and Gradient Boost: I tuned number of trees and depth
-        - trained ML model on 2013 wheat data
-        - save and pickle model for future use
-    5. Model Analysis
-        - tested ML model on 2014 wheat data
+
+1. Preprocessing Data
+..* remove samples (rows) with missing data
+..* remove useless features (columns) with zero variance
+2. Exploratory Data Analysis (EDA)
+..* review feature(s) distributions
+..* review target distribution (to help determine a proper train/test/split)
+3. Feature Selection
+..* run/evaluate ML algorithms
+..* evaluate feature importances
+..* run sequential backward selection (SBS) for further feature selection insight
+4. Model Optimization
+..* trained ML model on 2013 wheat data
+..* MODELS USED: Linear Regression, Random Forrest Regressor, Gradient Boosting Regressor
+..* Linear Regression: I utilized RANSAC (random sampling consensus) method and tuned the same size number
+..* Random Forest and Gradient Boost: I tuned number of trees and depth
+..* save and pickle model for future use
+5. Model Analysis
+..* tested ML model on 2014 wheat data
+..* evaluated residuals over predicted values
+..* evaluated predicted values over true values
 
 
 ## TRAIN/TEST MODEL 
