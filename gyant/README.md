@@ -19,9 +19,7 @@ Utilizing anonymized raw text data, classify whether a person has Zika or not.
     * Feature Extraction (1 feats): count number of occurrences of the word "zika" (RegEx equivalent ==> [r'z.{2}a']) per document
     * Feature Extraction (4 feats): numerical sentiment polarity scores (positive, neutral, negative, compounded) were given per document 
     * Feature Extraction (n feats): performed latent semantic analysis (LSA), aka, I ran a TFIDF then a SVD(n components) on the processed text
-
-![Text Data Pipeline](pipeline_flow_chart.png)
-
+    * ![Text Data Pipeline](pipeline_flow_chart.png)
 
 3. __Training Model(s)__
     * Algorithms:
