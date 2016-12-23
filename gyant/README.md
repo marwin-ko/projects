@@ -22,19 +22,22 @@ Utilizing anonymized raw text data, classify whether a person has Zika or not.
     * ![Text Data Pipeline](pipeline_flow_chart.png)
 
 3. __Training Model(s)__
-    * Algorithms:
-    * Parameters:
-    * Metrics: 
-
+    * Algorithms: Gradient Boost, Logistic Regression, Random Forest, Gaussian Naive Bayes 
+    * Parameters: n principal components
+    
 
 ## MODEL ANALYSIS
-
+Go to zika\_classification\_model.ipynb for analysis.
 
 
 ## SOLUTIONS
-- more data
-- word2vec
-- latent dirichlet allocation (LDA)
+- Obtain more text data ==> GYANT's own medical corpus!
+- Build a Word2Vec model for several applications:
+    * granular semantic similarity
+    * word prediction from text (using continuous bag of words model)
+    * context prediction from an input word (skip gram model)
+    * engineering new features (for convolution neural networks)
+- Build a Latent Dirichlet Allocation (LDA) model for probabilistic topic model. This is can be used to help guide the artificial intelligent doctor (AID) in chat responses. For example, given some text from a person, the AID can determine whether a person is sick or not sick. Or even deteremine if a person is just messing around/trolling the AID via raw text. NOTE: This would need a large corpus to train on in order to perform well.
 
 
 ## THANK YOU
