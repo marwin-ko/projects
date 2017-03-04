@@ -34,6 +34,7 @@ def user_1st_degreex(user_id):
     return first_conns
 @app.route('/remote/api/v1.0/users', methods = [''])
 def user_2nd_degree():
+    # From your 1st degree connections, get their 1st degree connections...this will yield your 2nd degree connections
     user_id = input('Enter user id: ')
     first_conns = user_1st_degreex(user_id)
     second_conns = []
