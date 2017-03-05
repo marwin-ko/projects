@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, abort, jsonify, make_response, request
 from elasticsearch import Elasticsearch
 app = Flask(__name__)
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}], http_auth=('elastic', 'changeme'))
@@ -32,7 +32,7 @@ def user_1st_degreex(user_id):
     classmate_ids = [classmate['_id'] for classmate in classmates]
     first_conns = list(set(coworker_ids+classmate_ids))
     return first_conns
-@app.route('/remote/api/v1.0/users', methods = [''])
+@app.route('/remote/api/v1.0/users', methods = ['GET'])
 def user_2nd_degree():
     # From your 1st degree connections, get their 1st degree connections...this will yield your 2nd degree connections
     user_id = input('Enter user id: ')
